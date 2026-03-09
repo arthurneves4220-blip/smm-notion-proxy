@@ -3,7 +3,7 @@
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN; // configurado nas env vars da Vercel
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Libera CORS para qualquer origem
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
