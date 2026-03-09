@@ -5,7 +5,9 @@ const NOTION_TOKEN = process.env.NOTION_TOKEN; // configurado nas env vars da Ve
 
 module.exports = async function handler(req, res) {
   // Libera CORS para qualquer origem
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  const origin = req.headers.origin || "*";
+  res.setHeader("Access-Control-Allow-Origin", origin);
+  res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
