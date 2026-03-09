@@ -1,0 +1,12 @@
+{
+  "name": "smm-notion-proxy",
+  "version": "1.0.0",
+  "description": "Proxy para Notion API — SM Manager",
+  "main": "api/notion.js",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
